@@ -26,7 +26,8 @@ namespace SportShop.Model
 
         public int Id { get; set; }
 
-        public string ProductName {
+        public string ProductName
+        {
             get { return productName; }
             set
             {
@@ -45,7 +46,8 @@ namespace SportShop.Model
             }
         }
 
-        public string CountryDistributor {
+        public string CountryDistributor
+        {
             get { return countryDistributor; }
             set
             {
@@ -54,7 +56,8 @@ namespace SportShop.Model
             }
         }
 
-        public decimal Price {
+        public decimal Price
+        {
             get { return price; }
             set
             {
@@ -63,7 +66,8 @@ namespace SportShop.Model
             }
         }
 
-        public string SportCategory {
+        public string SportCategory
+        {
             get { return sportCategory; }
             set
             {
@@ -82,8 +86,6 @@ namespace SportShop.Model
             }
         }
 
-
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         public Product()
@@ -99,7 +101,7 @@ namespace SportShop.Model
 
         public override string ToString()
         {
-            return $" {Image} {ProductName} - {ProductModel} " ;
+            return $" {Image} {ProductName} - {ProductModel} ";
         }
     }
 }

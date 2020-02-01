@@ -6,9 +6,13 @@
         xmlns:local="clr-namespace:SportShop"
         xmlns:local1="clr-namespace:SportShop.View"
         xmlns:model ="clr-namespace:SportShop.Model"
+        xmlns:viewmodel ="clr-namespace:SportShop.ViewModel"
         mc:Ignorable="d"
         Title="Sport Shop" Height="600" Width="1000">
 
+    <Window.DataContext>
+        <viewmodel:ProductViewModel/>
+    </Window.DataContext>
     <Window.Resources>
         <DataTemplate x:Key="SportTemplate" DataType="{x:Type model:Product}">
             <StackPanel Orientation="Horizontal">
@@ -49,7 +53,6 @@
         </StackPanel>
         
         <!--BUttons to Remove Product and to Default Values-->
-
         <Button x:Name="delButton"
                 Content="Delete"
                 Padding="10"
@@ -69,6 +72,5 @@
         <!--Sport Product Control-->
         <local1:ProductInfo Grid.Column="1" Margin="20"
                             DataContext="{Binding ElementName=listOfProducts, Path= SelectedItem}"></local1:ProductInfo>
-        
     </Grid>
 </Window>
